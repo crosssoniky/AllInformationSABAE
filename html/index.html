@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Test</title>
+    <!-- Bootstrap -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="AllInfomation.css" rel="stylesheet">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="AllInfomation.js"></script>
+</head>
+<body onload="initialize()">
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container-fluid">
+            <div class="navbar-left">
+                <button type="button" class="btn btn-top btn-sm" aria-label="Left Align" onclick="sidebar()">
+                    <span class=" glyphicon glyphicon-list" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="navbar-right">
+                <a class="navbar-brand" style="color:#c5c5c5">鯖江インフォメーション</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar" id="sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a>設定 <span class="sr-only">(current)</span></a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li class="group"><a>公共施設</a></li>
+                    <li><a><input type="checkbox" id="鯖江の施設" onchange="checkCivicFacility()" />鯖江の施設</a></li>
+                    <li><a><input type="checkbox" id="医療機関" onchange="checkMedicalInstitute()" />医療機関</a></li>
+                    <li><a><input type="checkbox" id="投票場所" onchange="checkPolls()" />投票場所</a></li>
+                    <li><a><input type="checkbox" id="公共トイレ" onchange="checkPublicToilet()" />公共トイレ</a></li>
+                    <li><a><input type="checkbox" id="公衆無線LAN" onchange="checkPublicWIFI()" />公衆無線LAN</a></li>
+                    <li><a><input type="checkbox" id="オープンBeacon" onchange="checkBeacon()" />オープンBeacon</a></li>
+                    <li class="group"><a>非常時</a></li>
+                    <li><a><input type="checkbox" id="AED設置場所" onchange="checkAED()" />AED設置場所</a></li>
+                    <li><a><input type="checkbox" id="災害時要援護者利用施設" onchange="checkRAAUFD()" />災害時要援護者利用施設</a></li>
+                    <li><a><input type="checkbox" id="一時避難所" onchange="checkTemporaryGatheringLocation()" />一時避難所</a></li>
+                    <li><a><input type="checkbox" id="避難場所" onchange="checkShelter()" />避難場所</a></li>
+                    <li><a><input type="checkbox" id="消火栓" onchange="checkHydrant()" />消火栓</a></li>
+                    <li class="group"><a>交通</a></li>
+                    <li><a><input type="checkbox" id="道路工事" onchange="checkRoadConstruction()" />道路工事</a></li>
+                    <li><a><input type="checkbox" id="駐車場" onchange="checkParkingFacility()" />駐車場</a></li>
+                    <li class="group"><a>その他</a></li>
+                    <li><a><input type="checkbox" id="観光情報" onchange="checkCivicPOI()" />観光情報</a></li>
+                    <li><a><input type="checkbox" id="農産物直売所" onchange="checkFarmersMarket()" />農産物直売所</a></li>
+                </ul>
+            </div>
+            <div class=" main">
+                <div id="map_canvas" class="GMaps"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
