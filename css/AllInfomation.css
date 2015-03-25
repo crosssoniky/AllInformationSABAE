@@ -49,7 +49,7 @@ body {
         bottom: 0;
         left: -235px;
         width: 235px;
-        z-index: 1000;
+        z-index: 10;
         display: block;
         padding: 20px;
         overflow-x: hidden;
@@ -78,13 +78,33 @@ body {
         background-color: #ca8b42;
     }
 
-    .nav-sidebar > .group > a,
-    .nav-sidebar > .group > a:hover,
-    .nav-sidebar > .group > a:focus {
+    .nav-sidebar > .group-blue > a,
+    .nav-sidebar > .group-blue > a:hover,
+    .nav-sidebar > .group-blue > a:focus {
         color: #fff;
-        background-color: #428bca;
+        background-color: #5781fc;
     }
 
+    .nav-sidebar > .group-green > a,
+    .nav-sidebar > .group-green > a:hover,
+    .nav-sidebar > .group-green > a:focus {
+        color: #fff;
+        background-color: #00cc3c;
+    }
+
+    .nav-sidebar > .group-red > a,
+    .nav-sidebar > .group-red > a:hover,
+    .nav-sidebar > .group-red > a:focus {
+        color: #fff;
+        background-color: #fc6355;
+    }
+
+    .nav-sidebar > .group-orange > a,
+    .nav-sidebar > .group-orange > a:hover,
+    .nav-sidebar > .group-orange > a:focus {
+        color: #fff;
+        background-color: #ff8811;
+    }
 
 
 /*
@@ -139,4 +159,35 @@ div.GMaps {
     right: 3px;
     bottom: 53px;
     left: 3px;
+}
+
+
+/**
+    吹き出し http://qiita.com/ymrl/items/de49a7e0aa7f2e54cf17
+*/
+@media (max-width: 768px) {
+    .balloon {
+        position: absolute;
+        left: 10%;
+        bottom: 50%;
+        right: 10%;
+        height: 200px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        text-align: center;
+        z-index: -1;
+    }
+}
+@media (min-width: 768px) {
+    .balloon {
+        position: absolute;
+        left: 10%;
+        bottom: 50%;
+        right: 10%;
+        height: 155px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        text-align: center;
+        z-index: -1;
+    }
 }

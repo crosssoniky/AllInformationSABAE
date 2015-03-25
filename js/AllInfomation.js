@@ -1,4 +1,5 @@
 ﻿var gSidebarInApp = false;
+var AboutBoard = false;
 var map;
 var MarkerShelter = [];
 var MarkerPolls = [];
@@ -93,7 +94,8 @@ function checkShelter() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/red.png"
                 });
                 MarkerShelter.push(marker);
                 SetMarker(marker);
@@ -128,7 +130,8 @@ function checkPolls() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/green.png"
                 });
                 MarkerPolls.push(marker);
                 SetMarker(marker);
@@ -163,7 +166,8 @@ function checkCivicPOI() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/orange.png"
                 });
                 MarkerCivicPOI.push(marker);
                 SetMarker(marker);
@@ -198,7 +202,8 @@ function checkBeacon() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/green.png"
                 });
                 MarkerBeacon.push(marker);
                 SetMarker(marker);
@@ -233,7 +238,8 @@ function checkPublicToilet() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/green.png"
                 });
                 MarkerPublicToilet.push(marker);
                 SetMarker(marker);
@@ -268,7 +274,8 @@ function checkParkingFacility() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/blue.png"
                 });
                 MarkerParkingFacility.push(marker);
                 SetMarker(marker);
@@ -303,7 +310,8 @@ function checkMedicalInstitute() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/green.png"
                 });
                 MarkerMedicalInstitute.push(marker);
                 SetMarker(marker);
@@ -338,7 +346,8 @@ function checkHydrant() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/red.png"
                 });
                 MarkerHydrant.push(marker);
                 SetMarker(marker);
@@ -373,7 +382,8 @@ function checkFarmersMarket() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/orange.png"
                 });
                 MarkerFarmersMarket.push(marker);
                 SetMarker(marker);
@@ -408,7 +418,8 @@ function checkPublicWIFI() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/green.png"
                 });
                 MarkerPublicWIFI.push(marker);
                 SetMarker(marker);
@@ -443,7 +454,8 @@ function checkAED() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/red.png"
                 });
                 MarkerAED.push(marker);
                 SetMarker(marker);
@@ -478,7 +490,8 @@ function checkRAAUFD() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/red.png"
                 });
                 MarkerRAAUFD.push(marker);
                 SetMarker(marker);
@@ -513,7 +526,8 @@ function checkTemporaryGatheringLocation() {
                 var latlng = new google.maps.LatLng(jsons[i].lat.value, jsons[i].long.value);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/red.png"
                 });
                 MarkerTemporaryGatheringLocation.push(marker);
                 SetMarker(marker);
@@ -551,7 +565,8 @@ function checkRoadConstruction() {
                 var latlng = new google.maps.LatLng(latlngArray[0], latlngArray[1]);
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: jsons[i].label.value
+                    title: jsons[i].label.value,
+                    icon: "AllInformation/blue.png"
                 });
                 MarkerRoadConstruction.push(marker);
                 SetMarker(marker);
@@ -606,6 +621,7 @@ function checkCivicFacility() {
                 var marker = new google.maps.Marker({
                     position: latlng,
                     title: jsons[i].label.value,
+                    icon: "AllInformation/green.png"
                 });
                 MarkerCivicFacility.push(marker);
                 SetMarker(marker);
@@ -620,4 +636,19 @@ function checkCivicFacility() {
         }
     }
 }
-
+function checkAbout() {
+    if (!AboutBoard) {
+        document.getElementById("ABOUT").style.zIndex = 100;
+        setTimeout(function () {
+            AboutBoard = true;
+        }, 100);
+    }
+}
+function RemoveAbout() {
+    if (AboutBoard) {
+        document.getElementById("ABOUT").style.zIndex = -100;
+        setTimeout(function () {
+            AboutBoard = false;
+        }, 100);
+    }
+}
